@@ -1083,14 +1083,15 @@ body.promo-off .promo{display:none}
     left:50%;right:auto;bottom:calc(16px + env(safe-area-inset-bottom));
     transform:translateX(-50%);
     width:auto;min-width:min(280px,calc(100% - 32px));height:auto;
-    padding:15px 26px;
-    justify-content:center;gap:10px;
+    padding:16px 28px;
+    justify-content:center;gap:12px;
     border-radius:18px;
-    background:var(--glass-2);color:var(--ink);border:1px solid var(--line-2);
+    background:var(--glass-2);color:#e3bba0;border:1px solid rgba(227,187,160,.45);
     backdrop-filter:blur(12px) saturate(140%);-webkit-backdrop-filter:blur(12px) saturate(140%);
-    box-shadow:0 14px 38px -14px rgba(0,0,0,.55);
+    box-shadow:0 0 32px 4px rgba(227,187,160,.35),0 14px 38px -14px rgba(0,0,0,.55);
+    font-size:15px;
   }
   .wa-float:hover{transform:translateX(-50%) translateY(-3px);filter:none}
   .wa-float span{display:inline}
-  .wa-float svg{width:20px;height:20px}
+  .wa-float svg{width:24px;height:24px}
 }
