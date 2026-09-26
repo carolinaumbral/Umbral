@@ -1059,3 +1059,24 @@ body.promo-off .promo{display:none}
   .fx-scatter{transform:none!important;fill:var(--accent)}
   .fx-pulse{opacity:1!important;animation:none!important}
 }
+
+/* ==========================================================================
+   BOTÓN FLOTANTE WHATSAPP
+   ========================================================================== */
+.wa-float{
+  position:fixed;right:20px;bottom:20px;z-index:400;
+  display:flex;align-items:center;gap:10px;
+  padding:14px 18px;border-radius:999px;
+  background:var(--accent);color:var(--accent-ink);
+  border:1px solid var(--accent);
+  font-family:var(--font-display);font-weight:500;font-size:13px;letter-spacing:.02em;
+  text-decoration:none;box-shadow:0 14px 38px -14px var(--accent-glow);
+  transition:transform .3s var(--ease),filter .3s var(--ease);
+}
+.wa-float:hover{transform:translateY(-3px);filter:brightness(1.07)}
+.wa-float svg{width:20px;height:20px;flex:none;fill:currentColor}
+@media (max-width:640px){
+  .wa-float{right:14px;bottom:14px;padding:12px;border-radius:50%}
+  .wa-float span{display:none}
+  .wa-float svg{width:24px;height:24px}
+}
