@@ -8,6 +8,8 @@
 
 /* Oculto temporalmente hasta nuevo aviso: todo lo relacionado con "clase gratuita" */
 .oculto-clase-gratuita{ display:none !important }
+/* Oculto temporalmente hasta nuevo aviso: otros bloques puntuales (p.ej. testimonio en vídeo) */
+.oculto-temporal{ display:none !important }
 
 /* ---- Hikasami: tipografía de textos pequeños (labels, captions, meta, tablas…) ----
    Archivos en /fonts (SIL OFL, Nikita Kononenko). */
