@@ -6,6 +6,9 @@
 
 *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0 }
 
+/* Oculto temporalmente hasta nuevo aviso: todo lo relacionado con "clase gratuita" */
+.oculto-clase-gratuita{ display:none !important }
+
 /* ---- Hikasami: tipografía de textos pequeños (labels, captions, meta, tablas…) ----
    Archivos en /fonts (SIL OFL, Nikita Kononenko). */
 @font-face{font-family:"Hikasami";src:url("fonts/Hikasami-Regular.woff2") format("woff2");font-weight:400;font-display:swap}

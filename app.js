@@ -439,8 +439,7 @@
       '<div class="res-cta">' +
         '<p>Este diagnóstico es orientativo. En la Sesión Estratégica lo revisamos contigo y definimos el plan para tu caso.</p>' +
         '<div class="hero__cta">' +
-          '<a href="#clase" class="btn btn--solid btn--lg" data-close-quiz>Quiero ver la clase gratuita</a>' +
-          '<a href="#clase" class="btn btn--lg" data-close-quiz>Agenda tu Sesión Estratégica</a>' +
+          '<a href="#clase" class="btn btn--solid btn--lg" data-close-quiz>Agenda tu Sesión Estratégica</a>' +
           '<button class="btn btn--lg" id="quizRestart">Repetir test</button>' +
         '</div>' +
       '</div>';

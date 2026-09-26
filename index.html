@@ -50,8 +50,8 @@
         </svg>
       </span>
       <p class="gate__sub">No pasa nada. Cuando de verdad lo decidas, esta puerta seguirá aquí.</p>
-      <p class="gate__q">Aquí puedes ver tu clase gratuita</p>
-      <div class="vplayer" aria-label="Clase gratuita en vídeo">
+      <p class="gate__q oculto-clase-gratuita">Aquí puedes ver tu clase gratuita</p>
+      <div class="vplayer oculto-clase-gratuita" aria-label="Clase gratuita en vídeo">
         <div class="vplayer__frame">
           <span class="vplayer__badge">Próximamente</span>
           <button type="button" class="vplayer__play" aria-label="Reproducir la clase">▶</button>
@@ -139,11 +139,11 @@
       <a href="#umbral">Sobre Umbral</a>
       <a href="#faq">FAQ</a>
       <a href="#" class="nav__links-cta" data-open-quiz>Diagnóstico gratuito →</a>
-      <a href="#clase" class="nav__links-cta">Quiero la clase gratuita →</a>
+      <a href="#clase" class="nav__links-cta oculto-clase-gratuita">Quiero la clase gratuita →</a>
     </nav>
     <div class="nav__right">
       <button class="btn btn--sm btn--nav" data-open-quiz>Diagnóstico gratuito</button>
-      <a href="#clase" class="btn btn--solid btn--sm btn--nav">Clase gratuita</a>
+      <a href="#clase" class="btn btn--solid btn--sm btn--nav oculto-clase-gratuita">Clase gratuita</a>
       <button class="btn btn--icon btn--ghost nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
     </div>
     <span class="nav__progress" id="navProgress" aria-hidden="true"></span>
@@ -170,7 +170,7 @@
         </p>
         <div class="hero__cta reveal" data-d="3">
           <button class="btn btn--solid btn--lg" data-open-quiz>Hacer el diagnóstico gratuito</button>
-          <a href="#clase" class="btn btn--lg">Quiero ver la clase gratuita</a>
+          <a href="#clase" class="btn btn--lg oculto-clase-gratuita">Quiero ver la clase gratuita</a>
         </div>
         <p class="hero__note reveal" data-d="4">
           <span data-count="18" data-prefix="+" data-suffix="">+18</span> años ·
@@ -247,7 +247,7 @@
           <p style="margin-top:16px">«Escucho tus palabras, pero también leo tus silencios.»</p>
           <div class="founder__cta">
             <a href="https://www.instagram.com/carolina.tinaut/" target="_blank" rel="noopener" class="btn">Instagram · @carolina.tinaut</a>
-            <a href="#clase" class="btn btn--solid">Quiero ver la clase gratuita</a>
+            <a href="#clase" class="btn btn--solid oculto-clase-gratuita">Quiero ver la clase gratuita</a>
           </div>
         </div>
       </div>
@@ -684,13 +684,13 @@
         <img class="final__face" src="fotos/791013239_1723658525416564_8454202638649415087_n.jpg"
              alt="Carolina Tinaut" loading="lazy" width="600" height="900">
         <p class="kicker">Tu siguiente paso</p>
-        <h2>Quiero ver la clase gratuita</h2>
+        <h2 class="oculto-clase-gratuita">Quiero ver la clase gratuita</h2>
         <p>Descubre el proceso de 4 meses con el que convertimos tu experiencia en una marca
           personal, una oferta monetizable y un sistema de conversaciones capaz de convertirse en
           negocio. En la Sesión Estratégica analizamos si Umbral es el camino adecuado para ti.</p>
         <div class="hero__cta">
           <!-- TODO: sustituir "#" por la URL real de la clase gratuita -->
-          <a href="#" class="btn btn--solid btn--lg">Quiero ver la clase gratuita</a>
+          <a href="#" class="btn btn--solid btn--lg oculto-clase-gratuita">Quiero ver la clase gratuita</a>
           <button class="btn btn--lg" data-open-quiz>Hacer el diagnóstico gratuito</button>
         </div>
 
