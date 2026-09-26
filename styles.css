@@ -99,13 +99,14 @@
   --title-bot:#74747e;
 }
 
-html{scroll-behavior:smooth;scroll-padding-top:calc(var(--promo-h) + var(--nav-h) + 20px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--promo-h) + var(--nav-h) + 20px);
+  overflow-x:hidden;overscroll-behavior-x:none;width:100%}
 
 body{
   background:var(--bg); color:var(--ink);
   font-family:var(--font-small); font-size:15px; line-height:1.6; letter-spacing:.01em;
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden; min-height:100vh;
+  overflow-x:hidden; overscroll-behavior-x:none; min-height:100vh; width:100%;
 }
 body.no-scroll{overflow:hidden}
 a{color:inherit;text-decoration:none}
