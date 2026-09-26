@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UMBRAL — Construye tu marca personal desde quién eres, no desde lo que pide el mercado</title>
+<meta name="description" content="Método de Arquitectura Empresarial Identitaria: convierte tu experiencia y tu forma de trabajar en una marca personal con identidad, posicionamiento y magnetismo. +18 años uniendo estrategia de marca, psicología aplicada y negocio.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== PRELOADER / PUERTA ===== -->
+  <div id="preloader">
+    <div class="pl__bg" aria-hidden="true">
+      <img src="fotos/olas.jpg" alt="" width="1540" height="1030">
+    </div>
+    <div class="gate__view gate__view--ask" data-view="ask">
+      <div class="pl__brand">
+        <img class="pl__logo" src="fotos/logo-umbral.png" alt="Carolina Tinaut">
+        <span class="pl__name">Carolina Tinaut</span>
+      </div>
+      <span class="pl__wave">
+        <svg viewBox="0 0 240 30" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 15 q 15 -11 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0">
+            <animate attributeName="d" dur="2.6s" repeatCount="indefinite"
+              values="M0 15 q 15 -11 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0;
+                      M0 15 q 15 11 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0;
+                      M0 15 q 15 -11 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0"/>
+          </path>
+        </svg>
+      </span>
+      <p class="gate__q">Una pregunta que cambia tu rumbo para siempre.</p>
+      <p class="gate__sub">¿Vas a construir una empresa capaz de crecer sin que todo dependa de ti?</p>
+      <div class="gate__choices">
+        <button type="button" class="btn btn--solid btn--lg" data-gate="yes">Sí</button>
+        <button type="button" class="btn btn--lg" data-gate="no">No</button>
+      </div>
+    </div>
+
+    <div class="gate__view gate__view--no" data-view="no" hidden>
+      <span class="pl__name">Aún no es tu momento</span>
+      <span class="pl__wave">
+        <svg viewBox="0 0 240 30" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 15 q 15 -11 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0">
+            <animate attributeName="d" dur="2.6s" repeatCount="indefinite"
+              values="M0 15 q 15 -11 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0;
+                      M0 15 q 15 11 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0;
+                      M0 15 q 15 -11 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0"/>
+          </path>
+        </svg>
+      </span>
+      <p class="gate__sub">No pasa nada. Cuando de verdad lo decidas, esta puerta seguirá aquí.</p>
+      <p class="gate__q">Aquí puedes ver tu clase gratuita</p>
+      <div class="vplayer" aria-label="Clase gratuita en vídeo">
+        <div class="vplayer__frame">
+          <span class="vplayer__badge">Próximamente</span>
+          <button type="button" class="vplayer__play" aria-label="Reproducir la clase">▶</button>
+        </div>
+        <div class="vplayer__bar" aria-hidden="true">
+          <span>▶</span><span>0:00</span>
+          <span class="vplayer__track"><span></span></span>
+          <span>—:—</span><span>⛶</span>
+        </div>
+        <p class="vplayer__cap">El vídeo de tu clase gratuita estará disponible aquí muy pronto.</p>
+      </div>
+      <div class="gate__choices">
+        <button type="button" class="btn btn--lg" data-gate="back">Entrar a la web</button>
+      </div>
+    </div>
+  </div>
+  <noscript><style>#preloader{display:none!important}</style></noscript>
+  <script>
+  (function () {
+    var d = document, r = d.documentElement, pl = d.getElementById('preloader');
+    if (!pl) return;
+    r.classList.add('pl-lock');
+    function dismiss() {
+      pl.classList.add('is-done');
+      r.classList.remove('pl-lock');
+      setTimeout(function () { if (pl.parentNode) pl.parentNode.removeChild(pl); }, 700);
+    }
+    function view(name) {
+      var vs = pl.querySelectorAll('.gate__view'), i;
+      for (i = 0; i < vs.length; i++) vs[i].hidden = vs[i].getAttribute('data-view') !== name;
+    }
+    pl.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('[data-gate]');
+      if (b) {
+        var g = b.getAttribute('data-gate');
+        if (g === 'yes' || g === 'back') dismiss();
+        else if (g === 'no') view('no');
+        return;
+      }
+      if (e.target.closest && e.target.closest('.vplayer__play')) {
+        var f = pl.querySelector('.vplayer__track span'); if (!f) return;
+        f.style.transition = 'none'; f.style.width = '0';
+        requestAnimationFrame(function () { f.style.transition = 'width 1.1s linear'; f.style.width = '34%'; });
+        setTimeout(function () { f.style.width = '0'; }, 1500);
+      }
+    });
+  })();
+  </script>
+
+  <!-- ===== FONDO ===== -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__orbs"><span class="orb orb--1"></span><span class="orb orb--2"></span><span class="orb orb--3"></span></div>
+    <div class="bg__waves"><span class="w w1"></span><span class="w w2"></span><span class="w w3"></span></div>
+    <div class="bg__grain"></div><div class="bg__vignette"></div>
+  </div>
+  <svg class="svg-defs" aria-hidden="true"><defs>
+    <filter id="liquid">
+      <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="55" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="liquidSoft" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.010" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="34" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs></svg>
+
+  <!-- ===== BARRA DE OFERTA (marquee) ===== -->
+  <div class="promo" id="promo" role="region" aria-label="Oferta">
+    <div class="promo__track">
+      <span>🎁&nbsp;&nbsp;Oferta de lanzamiento&nbsp;·&nbsp;Los 10 primeros reciben un curso aplicable: Aprende a editar tus reels&nbsp;·&nbsp;Plazas limitadas este mes&nbsp;·&nbsp;Reserva tu Sesión Estratégica hoy&nbsp;&nbsp;</span>
+      <span aria-hidden="true">🎁&nbsp;&nbsp;Oferta de lanzamiento&nbsp;·&nbsp;Los 10 primeros reciben un curso aplicable: Aprende a editar tus reels&nbsp;·&nbsp;Plazas limitadas este mes&nbsp;·&nbsp;Reserva tu Sesión Estratégica hoy&nbsp;&nbsp;</span>
+    </div>
+    <button class="promo__x" id="promoClose" aria-label="Cerrar oferta">✕</button>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="UMBRAL — inicio">
+      <img class="brand__logo" src="fotos/logo-umbral.png" alt="UMBRAL · Estrategia · Marca · Crecimiento" width="240" height="240">
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#pilares">Pilares</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#umbral">Sobre Umbral</a>
+      <a href="#faq">FAQ</a>
+      <a href="#" class="nav__links-cta" data-open-quiz>Diagnóstico gratuito →</a>
+      <a href="#clase" class="nav__links-cta">Quiero la clase gratuita →</a>
+    </nav>
+    <div class="nav__right">
+      <button class="btn btn--sm btn--nav" data-open-quiz>Diagnóstico gratuito</button>
+      <a href="#clase" class="btn btn--solid btn--sm btn--nav">Clase gratuita</a>
+      <button class="btn btn--icon btn--ghost nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+    <span class="nav__progress" id="navProgress" aria-hidden="true"></span>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO (con la foto banner de fondo) ===== -->
+    <section class="hero wrap" id="inicio">
+      <div class="hero__bg" aria-hidden="true">
+        <img src="fotos/pared.jpg" alt="" loading="eager" width="1540" height="1030">
+      </div>
+      <div class="hero__inner">
+        <p class="kicker reveal">Arquitectura Empresarial Identitaria</p>
+        <h1 class="reveal" data-d="1">
+          Construye tu marca personal
+          <span class="accent">desde quién eres</span>
+        </h1>
+        <p class="hero__lead reveal" data-d="2">
+          Convierte quién eres, tu experiencia y tu forma única de hacer las cosas en una marca
+          personal con identidad, posicionamiento y magnetismo, capaz de atraer a las personas
+          que realmente encajan contigo y ayudarte a construir un negocio que crezca sin dejar
+          de ser tú.
+        </p>
+        <div class="hero__cta reveal" data-d="3">
+          <button class="btn btn--solid btn--lg" data-open-quiz>Hacer el diagnóstico gratuito</button>
+          <a href="#clase" class="btn btn--lg">Quiero ver la clase gratuita</a>
+        </div>
+        <p class="hero__note reveal" data-d="4">
+          <span data-count="18" data-prefix="+" data-suffix="">+18</span> años ·
+          <span data-count="400" data-prefix="+" data-suffix="K">+400K</span> facturados ·
+          <span data-count="100" data-suffix="%">100%</span> implementación · Sistema probado
+        </p>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"><span>Método</span>
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </div>
+    </section>
+
+    <!-- ===== VALUE PROP ===== -->
+    <section class="section wrap" id="metodo">
+      <div class="statement reveal">
+        <p class="kicker">El principio</p>
+        <p class="statement__q wide">La marca se adapta a la persona. <span class="accent">No la persona a la marca.</span></p>
+        <p class="statement__sub">
+          Un proceso de 4 meses para construir una marca personal con identidad, posicionamiento
+          y una oferta capaz de convertirse en negocio.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="section--sm wrap">
+      <div class="stats">
+        <div class="stat reveal">
+          <div class="stat__n" data-count="18" data-prefix="+">+18</div>
+          <p class="stat__t">Años ayudando a profesionales independientes a construir una marca personal con identidad propia.</p>
+        </div>
+        <div class="stat reveal" data-d="1">
+          <div class="stat__n" data-count="400" data-prefix="+" data-suffix="K">+400K</div>
+          <p class="stat__t">Facturados con nuestra propia marca personal y junto a las marcas personales de nuestros clientes.</p>
+        </div>
+        <div class="stat stat--plain reveal" data-d="2">
+          <div class="stat__n" data-count="100" data-suffix="%">100%</div>
+          <p class="stat__t">Implementación. No solo diseñamos la estrategia: la construimos contigo y para ti, paso a paso.</p>
+        </div>
+        <div class="stat stat--plain reveal" data-d="3">
+          <div class="stat__n">Sistema</div>
+          <p class="stat__t">Probado. Un método que se repite y da resultado en distintos sectores.</p>
+        </div>
+        <div class="stat stat--wide reveal">
+          <span class="stat__n" data-count="400" data-prefix="+" data-suffix="K">+400K</span>
+          <span class="stat__n" style="color:var(--ink);letter-spacing:.14em">facturados en diferentes sectores</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FUNDADORA (Sobre Umbral) ===== -->
+    <section class="section wrap" id="umbral">
+      <div class="founder">
+        <div class="founder__card reveal" data-reveal="left">
+          <figure class="founder__photo">
+            <img src="fotos/799673248_1596504102127387_8489044716735448155_n.jpg"
+                 alt="Retrato de Carolina Tinaut" loading="lazy" width="1063" height="1600">
+            <figcaption>Carolina Tinaut · Fundadora de Umbral</figcaption>
+          </figure>
+        </div>
+        <div class="reveal" data-reveal="right">
+          <p class="kicker">Quién hay detrás de Umbral</p>
+          <h2 style="margin-top:16px">Antes de ayudarte a construir tu marca personal, construí la mía.</h2>
+          <p>Durante más de 18 años he acompañado a personas en sus procesos de cambio como psicóloga.
+            Pero llegó un momento en el que entendí que el mayor límite para muchos profesionales no
+            estaba en su experiencia, sino en cómo se veían a sí mismos y en lo que se atrevían a mostrar.</p>
+          <p>Por eso decidí aplicar todo ese conocimiento a la construcción de marcas personales.</p>
+          <p>Hoy acompaño a profesionales independientes a hacer ese mismo camino: veo lo que todavía
+            no están viendo, abro un espacio seguro para mostrarlo, conecto quién son con lo que hacen
+            y lo traduzco en marca, mensaje y oferta. Y cuando llega el miedo, la crítica o la duda,
+            les sostengo para que no vuelvan a esconderse.</p>
+          <p>Lo que enseñamos en Umbral no nace de la teoría.</p>
+          <span class="big">Nace de haberlo <span class="accent">construido primero</span>.</span>
+          <p style="margin-top:16px">«Escucho tus palabras, pero también leo tus silencios.»</p>
+          <div class="founder__cta">
+            <a href="https://www.instagram.com/carolina.tinaut/" target="_blank" rel="noopener" class="btn">Instagram · @carolina.tinaut</a>
+            <a href="#clase" class="btn btn--solid">Quiero ver la clase gratuita</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PILARES ===== -->
+    <section class="section wrap" id="pilares">
+      <div class="section__head">
+        <p class="kicker reveal">Qué construimos</p>
+        <h2 class="section__title reveal" data-d="1">¿Qué construimos en estos 4 meses?</h2>
+        <p class="section__sub reveal" data-d="2">
+          Esto no es enseñarte a comunicarte en redes. Construimos tres piezas que tienen que
+          funcionar juntas: tu identidad, tu marca y una oferta y un sistema capaces de
+          convertirse en negocio.
+        </p>
+      </div>
+      <div class="pillars">
+        <article class="pillar reveal">
+          <div class="pillar__head">
+            <span class="pillar__badge">01</span>
+            <span class="pillar__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 21l5-3 5 3-1.5-6.5"/></svg></span>
+          </div>
+          <div class="pillar__viz" aria-hidden="true">
+            <svg viewBox="0 0 300 112" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(150 56)">
+                <circle class="viz-stroke viz-ring" cx="0" cy="0" r="6"/>
+                <circle class="viz-stroke viz-ring" cx="0" cy="0" r="6"/>
+                <circle class="viz-stroke viz-ring" cx="0" cy="0" r="6"/>
+                <circle cx="0" cy="0" r="5" fill="var(--accent)"/>
+              </g>
+            </svg>
+          </div>
+          <h3 class="pillar__name">Identidad</h3>
+          <p class="pillar__lead">
+            Descubrimos quién eres, qué te hace diferente y qué parte de ti aparece cuando haces
+            tu trabajo desde tu lugar natural.
+          </p>
+          <hr class="pillar__rule">
+          <div class="pillar__body">
+            <p>Trabajamos qué has aprendido a sostener aunque ya no te haga bien, qué partes de ti
+            has adaptado para encajar y qué quieres defender a partir de ahora.</p>
+            <p>Aquí no se empieza construyendo la marca. Se empieza descubriendo a la persona que va
+            a sostenerla, para que dejes de tener que demostrar tu valor cada vez que alguien llega.</p>
+            <p>Es la base de todo lo demás: sin una identidad clara, cualquier estrategia de
+            contenido o de ventas trabaja el doble para conseguir la mitad.</p>
+          </div>
+          <ul class="ticks">
+            <li>Descubre qué te hace realmente diferente.</li>
+            <li>Deja de adaptarte a lo que pide el mercado.</li>
+            <li>Convierte tu experiencia en una ventaja que nadie puede copiar.</li>
+          </ul>
+        </article>
+
+        <article class="pillar reveal" data-d="1">
+          <div class="pillar__head">
+            <span class="pillar__badge">02</span>
+            <span class="pillar__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8.5V20l-4 1.5v-8z"/></svg></span>
+          </div>
+          <div class="pillar__viz" aria-hidden="true">
+            <svg viewBox="0 0 300 112" preserveAspectRatio="xMidYMid meet">
+              <rect class="viz-bar" x="66"  y="18" width="26" height="78" rx="4"/>
+              <rect class="viz-bar" x="112" y="18" width="26" height="78" rx="4"/>
+              <rect class="viz-bar" x="158" y="18" width="26" height="78" rx="4"/>
+              <rect class="viz-bar" x="204" y="18" width="26" height="78" rx="4"/>
+              <line class="viz-stroke viz-dim" x1="46" y1="96" x2="254" y2="96"/>
+            </svg>
+          </div>
+          <h3 class="pillar__name">Expresión</h3>
+          <p class="pillar__lead">Convertimos esa identidad en posicionamiento, mensaje, estética y contenido: todo lo que hace que te reconozcan antes de hablar contigo.</p>
+          <hr class="pillar__rule">
+          <div class="pillar__body">
+            <p>No basta con mirar hacia dentro. Lo que descubrimos tiene que convertirse en
+            decisiones, en palabras, en una estética y en una oferta que de verdad te representen.</p>
+            <p>Diseñamos contigo cómo apareces, qué dices y qué muestras, para que las personas
+            adecuadas te reconozcan y las que no encajan se autoseleccionen solas.</p>
+            <p>Porque una marca personal potente no busca gustar a todo el mundo. Busca que quien
+            de verdad conecta contigo diga: «quiero trabajar con esta persona».</p>
+          </div>
+          <ul class="ticks">
+            <li>Genera el efecto fan: te eligen antes de la primera llamada.</li>
+            <li>Vende con más facilidad y menos desgaste.</li>
+            <li>Ocupa el espacio que tu experiencia ya merece.</li>
+          </ul>
+        </article>
+
+        <article class="pillar reveal" data-d="2">
+          <div class="pillar__head">
+            <span class="pillar__badge">03</span>
+            <span class="pillar__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3v19M12 21V9l8 3v9M3 21h18M8 8h.01M8 12h.01M8 16h.01"/></svg></span>
+          </div>
+          <div class="pillar__viz" aria-hidden="true">
+            <svg viewBox="0 0 300 112" preserveAspectRatio="xMidYMid meet">
+              <line class="viz-stroke viz-dim" x1="78" y1="56" x2="150" y2="56"/>
+              <line class="viz-stroke viz-dim" x1="150" y1="56" x2="222" y2="56"/>
+              <circle class="viz-node" cx="78"  cy="56" r="10"/>
+              <circle class="viz-node" cx="150" cy="56" r="10"/>
+              <circle class="viz-node" cx="222" cy="56" r="10"/>
+            </svg>
+          </div>
+          <h3 class="pillar__name">Negocio</h3>
+          <p class="pillar__lead">Convertimos esa marca en una oferta monetizable y en un sistema para generar conversaciones que puedan convertirse en clientes.</p>
+          <hr class="pillar__rule">
+          <div class="pillar__body">
+            <p>Si ya tienes un producto o servicio que funciona, lo alineamos con tu nueva
+            posición. Si todavía no lo tienes claro, lo construimos contigo a partir de tu experiencia.</p>
+            <p>Creamos tus lead magnets y la estructura de conversación para que sepas cómo detectar
+            interés, profundizar y presentar tu oferta, sin tener que convertirte en vendedor.</p>
+            <p>Porque no queremos que termines con una marca que solo recibe likes. Queremos que
+            tengas algo que pueda convertirse en negocio.</p>
+          </div>
+          <ul class="ticks">
+            <li>Define una oferta capaz de convertirse en ingresos.</li>
+            <li>Consigue un sistema para generar conversaciones, no solo seguidores.</li>
+            <li>Construye un negocio que crece sin dejar de ser tú.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="tvideo aiband reveal">
+        <span class="tvideo__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="8" width="20" height="5"/>
+            <path d="M12 8v13M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"/>
+            <path d="M12 8H7.5a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8z"/>
+            <path d="M12 8h4.5a2.5 2.5 0 0 0 0-5C13 3 12 8 12 8z"/>
+          </svg>
+        </span>
+        <div class="tvideo__txt">
+          <strong>También recibirás una IA completamente personalizada y adaptada a tus necesidades</strong>
+          <span>Te ayuda durante el proceso de creación y también a futuro, para mantener tu voz y tu coherencia de marca.</span>
+        </div>
+      </div>
+
+      <div class="deliver glass reveal">
+        <p class="kicker">Lista de entregables</p>
+        <h3>¿Qué recibiré?</h3>
+        <ul class="ticks">
+          <li>4 sesiones estratégicas 1 a 1 con Carolina.</li>
+          <li>Una sesión presencial en Madrid (o por videollamada) con nuestra especialista en estética de marca personal.</li>
+          <li>Una oferta monetizable y escalable.</li>
+          <li>2 lead magnets.</li>
+          <li>20 guiones + estrategia de contenidos.</li>
+          <li>Según la modalidad escogida, opción de filmmaker a domicilio (solo península): recibes tus contenidos grabados y editados, listos para subir.</li>
+          <li>Solo en la modalidad VIP: un día completo con Carolina —aprendéis y mejoráis tu marca juntos, coméis juntos y grabáis tus primeros 20 reels en su estudio personal, con los contenidos editados y listos para subir.</li>
+          <li>Una inteligencia artificial exclusiva, personalizada y a tu medida.</li>
+          <li>Atención personalizada durante todo el proceso, con acompañamiento vía WhatsApp.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== ROADMAP ===== -->
+    <section class="section wrap" id="roadmap">
+      <div class="section__head center">
+        <p class="kicker reveal">El camino</p>
+        <h2 class="section__title reveal" data-d="1">Del boca a boca a que te elijan por ser tú</h2>
+        <p class="section__sub reveal" data-d="2">
+          Cada etapa parte de un dolor real que frena tu crecimiento y termina con lo que
+          construimos contigo para resolverlo.
+        </p>
+      </div>
+
+      <div class="roadmap" id="roadmapTrack">
+        <span class="roadmap__spine" aria-hidden="true"></span>
+
+        <div class="road-step road-step--single reveal">
+          <span class="road-step__node">0</span>
+          <p class="road-step__title">Punto de partida · hoy</p>
+          <div class="road-step__card">
+            <div class="road-cell road-cell--pain">
+              <span class="road-cell__k"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>El dolor</span>
+              <p>Tienes experiencia y resultados, pero tu negocio depende del boca a boca y de que tú sigas ahí cada mes. Además, tienes que justificarte y demostrar tu validez cada vez que quieres vender.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="road-step reveal">
+          <span class="road-step__node">1</span>
+          <p class="road-step__title">Etapa 1 · Mirar hacia dentro</p>
+          <div class="road-step__card">
+            <div class="road-cell road-cell--pain">
+              <span class="road-cell__k"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>El dolor</span>
+              <p>Llevas años construyéndote desde fuera: adaptándote a lo que pide el mercado y a la tendencia del momento.</p>
+            </div>
+            <div class="road-cell road-cell--fix">
+              <span class="road-cell__k"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Cómo lo resolvemos</span>
+              <p>Primero te analizamos hacia dentro: qué te hace diferente, qué defiendes y qué parte de ti aparece cuando haces lo que de verdad te representa.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="road-step reveal">
+          <span class="road-step__node">2</span>
+          <p class="road-step__title">Etapa 2 · Identidad y posicionamiento</p>
+          <div class="road-step__card">
+            <div class="road-cell road-cell--pain">
+              <span class="road-cell__k"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>El dolor</span>
+              <p>Te confunden con la competencia. Nadie te reconoce todavía como la referencia, aunque lo hagas mejor que la mayoría.</p>
+            </div>
+            <div class="road-cell road-cell--fix">
+              <span class="road-cell__k"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Cómo lo resolvemos</span>
+              <p>Construimos un posicionamiento y una marca personal que transmiten quién eres de verdad, para que te reconozcan antes de la primera conversación.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="road-step reveal">
+          <span class="road-step__node">3</span>
+          <p class="road-step__title">Etapa 3 · Expresión y captación</p>
+          <div class="road-step__card">
+            <div class="road-cell road-cell--pain">
+              <span class="road-cell__k"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>El dolor</span>
+              <p>Publicas sin estrategia, o dejas de publicar, y las oportunidades se secan. Todo sigue dependiendo del boca a boca.</p>
+            </div>
+            <div class="road-cell road-cell--fix">
+              <span class="road-cell__k"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Cómo lo resolvemos</span>
+              <p>Diseñamos un sistema de contenido y captación que trabaja para ti todos los días, también cuando no estás vendiendo de forma activa.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="road-step reveal">
+          <span class="road-step__node">4</span>
+          <p class="road-step__title">Etapa 4 · Negocio y sostén</p>
+          <div class="road-step__card">
+            <div class="road-cell road-cell--pain">
+              <span class="road-cell__k"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>El dolor</span>
+              <p>Te da miedo exponerte: la crítica, el rechazo, dejar de gustar. Así que sigues escondiendo partes de ti.</p>
+            </div>
+            <div class="road-cell road-cell--fix">
+              <span class="road-cell__k"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Cómo lo resolvemos</span>
+              <p>Te acompañamos a sostenerte cuando aparece esa respuesta, y a construir la estructura para crecer sin depender solo de tus horas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="road-step road-step--single road-step--goal reveal">
+          <span class="road-step__node">✓</span>
+          <p class="road-step__title">Resultado</p>
+          <div class="road-step__card">
+            <div class="road-cell road-cell--fix">
+              <span class="road-cell__k"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A dónde llegas</span>
+              <p>En 4 meses: una marca personal que te representa de verdad, con una oferta clara y un sistema de conversaciones capaz de convertirse en negocio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section__head center reveal" style="margin:clamp(36px,5vw,52px) auto 0">
+        <button class="btn btn--solid btn--lg" data-open-quiz>¿En qué etapa estás? Hazte el diagnóstico</button>
+      </div>
+    </section>
+
+    <!-- ===== LA DIFERENCIA (gráfica animada) ===== -->
+    <section class="section wrap">
+      <div class="figcard reveal">
+        <div class="figcard__txt">
+          <p class="kicker">La diferencia</p>
+          <p class="figcard__q">
+            No construimos una marca para que el mercado te quiera.
+            Construimos <span class="accent">la identidad capaz de sostenerla</span>.
+          </p>
+          <p class="figcard__sub">
+            No nos centramos solo en lo que vendes hoy. Construimos una autoridad lo bastante
+            fuerte como para vender todo lo que vayas desarrollando después: los productos, los
+            servicios y las tendencias cambian; el pilar central —tú— no cambia.
+          </p>
+        </div>
+        <div class="figchart" aria-hidden="true">
+          <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet">
+            <line class="fx-grid" x1="20" y1="45"  x2="300" y2="45"/>
+            <line class="fx-grid" x1="20" y1="95"  x2="300" y2="95"/>
+            <line class="fx-grid" x1="20" y1="145" x2="300" y2="145"/>
+            <line class="fx-axis" x1="20" y1="20" x2="20" y2="180"/>
+            <line class="fx-axis" x1="20" y1="180" x2="300" y2="180"/>
+            <path class="fx-area fx-draw2" d="M20 175 L70 150 L120 120 L170 88 L220 55 L292 26 L292 180 L20 180 Z"/>
+            <path class="fx-dim fx-draw" pathLength="1" d="M20 168 L70 122 L120 98 L170 102 L220 112 L292 120"/>
+            <path class="fx-accent fx-draw" pathLength="1" d="M20 175 L70 150 L120 120 L170 88 L220 55 L292 26"/>
+            <circle class="fx-pulse" cx="292" cy="26" r="4"/>
+          </svg>
+          <div class="figchart__legend">
+            <b>Solo imagen</b>
+            <b class="is-accent">Identidad + método</b>
+          </div>
+          <p class="figchart__cap">El techo de una marca lo marca la identidad que hay detrás.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SIN ATAJOS: azar → método (gráfica animada) ===== -->
+    <section class="section--sm wrap">
+      <div class="figcard figcard--rev reveal">
+        <div class="figcard__txt">
+          <p class="kicker">Sin atajos</p>
+          <p class="figcard__q">
+            Adaptarte al mercado no es un método.
+            <span class="accent">Construir desde quién eres, sí.</span>
+          </p>
+          <p class="figcard__sub">
+            El mismo esfuerzo, persiguiendo cada tendencia, se dispersa. Con una identidad clara,
+            cada acción empuja en la misma dirección y se acumula.
+          </p>
+        </div>
+        <div class="figchart" aria-hidden="true">
+          <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet">
+            <line class="fx-axis" x1="24" y1="24" x2="24" y2="182"/>
+            <line class="fx-axis" x1="24" y1="182" x2="300" y2="182"/>
+            <polyline class="fx-accent fx-draw" pathLength="1" points="34,168 76,146 118,124 160,102 202,80 244,58 286,36"/>
+            <circle class="fx-scatter" cx="34"  cy="168" r="5"/>
+            <circle class="fx-scatter" cx="76"  cy="146" r="5"/>
+            <circle class="fx-scatter" cx="118" cy="124" r="5"/>
+            <circle class="fx-scatter" cx="160" cy="102" r="5"/>
+            <circle class="fx-scatter" cx="202" cy="80"  r="5"/>
+            <circle class="fx-scatter" cx="244" cy="58"  r="5"/>
+            <circle class="fx-scatter" cx="286" cy="36"  r="5"/>
+          </svg>
+          <div class="figchart__legend">
+            <b>Persiguiendo tendencias</b>
+            <b class="is-accent">Con identidad y método</b>
+          </div>
+          <p class="figchart__cap">El mismo esfuerzo, ordenado por una identidad clara.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIOS ===== -->
+    <section class="section wrap has-bg" id="testimonios">
+      <div class="secbg" aria-hidden="true">
+        <img src="fotos/grupo.jpg" alt="" loading="lazy" width="1540" height="1030">
+      </div>
+      <div class="section__head center">
+        <p class="kicker reveal">Testimonios reales</p>
+        <h2 class="section__title reveal" data-d="1">Lo que cambia cuando dejas de demostrar y empiezas a ser elegido</h2>
+      </div>
+      <div class="tgrid">
+        <article class="tcard reveal" data-reveal="left">
+          <div class="tcard__mark" aria-hidden="true">“</div>
+          <h3 class="tcard__h">Por fin puedo tomarme vacaciones</h3>
+          <p class="tcard__q">Ahora mi empresa crece aunque yo no esté en todo.</p>
+          <p class="tcard__src">Cliente Umbral</p>
+        </article>
+        <article class="tcard reveal" data-d="1">
+          <div class="tcard__mark" aria-hidden="true">“</div>
+          <h3 class="tcard__h">Volvería a invertir una y mil veces</h3>
+          <p class="tcard__q">Miles y miles de euros gastados anteriormente en formaciones y mentorías que solo me
+            hicieron perder el tiempo. Ahora tengo un verdadero sistema que me trae retorno económico.</p>
+          <p class="tcard__src">Cliente Umbral</p>
+        </article>
+        <article class="tcard reveal" data-reveal="right">
+          <div class="tcard__mark" aria-hidden="true">“</div>
+          <h3 class="tcard__h">He dejado de vender horas para construir empresa</h3>
+          <p class="tcard__q">Tener un sistema que trabaje para mí y esté adaptado a mis necesidades me permite tener
+            una vida estructurada, pasar tiempo con mi familia, mis aficiones y sobre todo no tener
+            que estar preocupada de si el mes siguiente facturaré o no.</p>
+          <p class="tcard__src">Cliente Umbral</p>
+        </article>
+      </div>
+      <div class="tvideo reveal">
+        <span class="tvideo__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <div class="tvideo__txt">
+          <strong>Testimonio real: creación de marca personal y sistema para joyería en Barcelona</strong>
+          <span>Vídeo · activa el sonido para escuchar el caso completo</span>
+        </div>
+        <a href="#clase" class="btn btn--sm" style="margin-left:auto">Ver el caso</a>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section wrap" id="faq">
+      <div class="section__head center">
+        <p class="kicker reveal">¿Tienes preguntas?</p>
+        <h2 class="section__title reveal" data-d="1">Yo te las respondo.</h2>
+      </div>
+      <div class="faq">
+        <div class="qa reveal">
+          <button class="qa__q" aria-expanded="false"><span>¿Esto es otra formación más?</span><span class="qa__ico" aria-hidden="true"></span></button>
+          <div class="qa__a"><div class="qa__a-inner">
+            No. Umbral es Plug and Play: no tienes que hacer grandes esfuerzos, porque hacemos todo
+            por ti, con tu supervisión. Es un proceso de acompañamiento en el que construimos
+            contigo una identidad de marca sólida, una forma de expresarla hacia fuera y un negocio
+            preparado para crecer. No vienes a acumular información. Vienes a implementar un
+            método, partas del nivel de experiencia que partas y seas del sector que seas.
+          </div></div>
+        </div>
+        <div class="qa reveal" data-d="1">
+          <button class="qa__q" aria-expanded="false"><span>¿Para quién está pensado?</span><span class="qa__ico" aria-hidden="true"></span></button>
+          <div class="qa__a"><div class="qa__a-inner">
+            Para profesionales independientes con experiencia real —psicólogos, consultores,
+            médicos, coaches, creativos, asesores o cualquier experto que viva de su conocimiento—
+            que sienten que su negocio todavía no está a la altura de lo que saben hacer. Si quieres
+            dejar de depender del boca a boca y construir una marca que te elija por ser tú, Umbral es para ti.
+          </div></div>
+        </div>
+        <div class="qa reveal" data-d="2">
+          <button class="qa__q" aria-expanded="false"><span>¿Por qué ahora sí me va a funcionar?</span><span class="qa__ico" aria-hidden="true"></span></button>
+          <div class="qa__a"><div class="qa__a-inner">
+            Porque el problema nunca ha sido tu falta de esfuerzo. Probablemente ya has probado
+            cursos, agencias, contenido o publicidad por separado. En Umbral trabajamos tu identidad,
+            tu expresión y tu negocio bajo un mismo método, construido desde dentro hacia fuera.
+            Ahí es donde aparece el cambio.
+          </div></div>
+        </div>
+        <div class="qa reveal" data-d="3">
+          <button class="qa__q" aria-expanded="false"><span>¿Qué incluye exactamente el programa Umbral?</span><span class="qa__ico" aria-hidden="true"></span></button>
+          <div class="qa__a"><div class="qa__a-inner">
+            Construimos tu identidad profesional, tu marca personal completa (posicionamiento,
+            narrativa, estética y contenido), tu oferta monetizable y un sistema de conversaciones
+            con lead magnets y script para convertir el interés en clientes. Todo en un proceso de
+            4 meses: 21 días de creación intensiva y 3 meses de acompañamiento mientras la muestras
+            al mundo. Los detalles exactos se confirman en tu Sesión Estratégica.
+          </div></div>
+        </div>
+        <div class="qa reveal" data-d="4">
+          <button class="qa__q" aria-expanded="false"><span>¿Cuánto dura el proceso y qué pasa después de crear la marca?</span><span class="qa__ico" aria-hidden="true"></span></button>
+          <div class="qa__a"><div class="qa__a-inner">
+            4 meses, en dos fases. Primero el Sprint Umbral, donde creamos y ponemos en marcha tu
+            marca. Después, una fase de acompañamiento donde te sostenemos mientras la muestras al
+            mundo, recalibramos con lo que responde el mercado y conectamos tu marca con tu negocio.
+          </div></div>
+        </div>
+        <div class="qa reveal" data-d="5">
+          <button class="qa__q" aria-expanded="false"><span>¿Hacéis publicidad o campañas de captación?</span><span class="qa__ico" aria-hidden="true"></span></button>
+          <div class="qa__a"><div class="qa__a-inner">
+            No. Umbral construye la base: identidad, marca, oferta, contenido y conversaciones. La
+            publicidad y la captación pagada pertenecen a una fase posterior, independiente y
+            opcional, y no están incluidas en el programa.
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="section wrap" id="clase">
+      <div class="final reveal">
+        <img class="final__face" src="fotos/791013239_1723658525416564_8454202638649415087_n.jpg"
+             alt="Carolina Tinaut" loading="lazy" width="600" height="900">
+        <p class="kicker">Tu siguiente paso</p>
+        <h2>Quiero ver la clase gratuita</h2>
+        <p>Descubre el proceso de 4 meses con el que convertimos tu experiencia en una marca
+          personal, una oferta monetizable y un sistema de conversaciones capaz de convertirse en
+          negocio. En la Sesión Estratégica analizamos si Umbral es el camino adecuado para ti.</p>
+        <div class="hero__cta">
+          <!-- TODO: sustituir "#" por la URL real de la clase gratuita -->
+          <a href="#" class="btn btn--solid btn--lg">Quiero ver la clase gratuita</a>
+          <button class="btn btn--lg" data-open-quiz>Hacer el diagnóstico gratuito</button>
+        </div>
+
+        <p class="final__mini">+18 años de experiencia · 4 meses de proceso · 100% implementación contigo</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer wrap">
+    <div class="footer__row">
+      <a href="#top" class="brand" aria-label="UMBRAL — inicio">
+        <img class="brand__logo" src="fotos/logo-umbral.png" alt="UMBRAL" width="240" height="240">
+      </a>
+      <div class="footer__links">
+        <a href="#">Aviso Legal y Política de Privacidad</a>
+        <a href="https://www.instagram.com/umbral.carolinatinaut/" target="_blank" rel="noopener">Instagram · @umbral.carolinatinaut</a>
+      </div>
+    </div>
+    <p class="footer__copy">© 2026 Umbral. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ===== DIAGNÓSTICO (modal) ===== -->
+  <div class="quiz" id="quiz" role="dialog" aria-modal="true" aria-label="Diagnóstico gratuito">
+    <div class="quiz__backdrop" data-close-quiz></div>
+    <div class="quiz__panel">
+      <button class="quiz__x" data-close-quiz aria-label="Cerrar">✕</button>
+      <div class="quiz__bar"><span id="quizBar"></span></div>
+      <div class="quiz__inner" id="quizInner"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

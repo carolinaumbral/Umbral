@@ -1,0 +1,21 @@
+.claude/
+*.tmp
+
+# fotos sin usar / duplicadas (sustituidas por versiones .jpg optimizadas)
+fotos/olas.png
+fotos/pared.png
+fotos/grupo.png
+fotos/olas
+fotos/pared
+fotos/grupo
+fotos/atardecer
+fotos/atardecer.png
+fotos/banner
+fotos/banner.png
+fotos/bombilla
+fotos/bombilla.png
+fotos/buceo
+fotos/buceo.png
+fotos/perros
+fotos/perros.png
+fotos/Imagen de Codex*.png

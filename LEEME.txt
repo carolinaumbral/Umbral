@@ -1,0 +1,25 @@
+UMBRAL — web local
+===================
+
+1. Descomprime este zip en cualquier carpeta (por ejemplo Escritorio\CAROLINA).
+
+2. Para verla, hay dos opciones:
+
+   OPCION A - directo (mas simple):
+   Haz doble clic en index.html y se abre en el navegador.
+
+   OPCION B - con servidor local (recomendado):
+   Haz doble clic en serve.ps1, o desde PowerShell dentro de esta carpeta:
+
+     powershell -ExecutionPolicy Bypass -File serve.ps1
+
+   Luego abre en el navegador: http://localhost:9412/
+
+3. Si le pides a Claude Code que la abra "en local", ya tiene todo lo
+   necesario en esta misma carpeta (incluido serve.ps1) para levantarla.
+
+Contenido:
+- index.html, styles.css, app.js -> la web
+- fonts/  -> tipografias (Hikasami, Coolvetica)
+- fotos/  -> imagenes usadas en la web
+- serve.ps1 -> mini servidor local en PowerShell (puerto 9412)
