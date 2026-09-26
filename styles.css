@@ -1079,7 +1079,15 @@ body.promo-off .promo{display:none}
 .wa-float:hover{transform:translateY(-3px);filter:brightness(1.07)}
 .wa-float svg{width:20px;height:20px;flex:none;fill:currentColor}
 @media (max-width:640px){
-  .wa-float{right:14px;bottom:14px;padding:12px;border-radius:50%}
-  .wa-float span{display:none}
-  .wa-float svg{width:24px;height:24px}
+  .wa-float{
+    left:0;right:0;bottom:0;width:100%;
+    justify-content:center;gap:10px;
+    border-radius:0;border-width:1px 0 0 0;
+    padding:14px 16px calc(14px + env(safe-area-inset-bottom));
+    box-shadow:0 -10px 30px -12px rgba(0,0,0,.5);
+  }
+  .wa-float:hover{transform:none}
+  .wa-float span{display:inline}
+  .wa-float svg{width:20px;height:20px}
+  .footer{padding-bottom:calc(40px + 56px + env(safe-area-inset-bottom))}
 }
