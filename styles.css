@@ -1095,3 +1095,41 @@ body.promo-off .promo{display:none}
   .wa-float span{display:inline}
   .wa-float svg{width:24px;height:24px}
 }
+
+/* ==========================================================================
+   AVISO DE COOKIES
+   ========================================================================== */
+.cookie-banner{
+  position:fixed;left:0;right:0;top:0;z-index:500;
+  display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;
+  padding:16px clamp(16px,4vw,32px);
+  padding-top:calc(16px + env(safe-area-inset-top));
+  background:var(--opaque);
+  backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid var(--line-2);
+  box-shadow:0 20px 50px -20px rgba(0,0,0,.6);
+}
+.cookie-banner[hidden]{display:none}
+.cookie-banner p{margin:0;color:var(--muted);font-size:13px;line-height:1.6;max-width:640px}
+.cookie-banner a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.cookie-banner__actions{display:flex;gap:10px;flex:none}
+@media (max-width:640px){
+  .cookie-banner{flex-direction:column;align-items:stretch;text-align:center}
+  .cookie-banner__actions{justify-content:center}
+}
+
+/* ==========================================================================
+   PÁGINAS LEGALES (Aviso Legal / Privacidad)
+   ========================================================================== */
+.legal-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:28px;flex-wrap:wrap}
+.legal-doc{max-width:760px}
+.legal-doc .kicker{margin-bottom:14px}
+.legal-doc h1{font-family:var(--font-display);font-weight:600;font-size:clamp(32px,5vw,52px);line-height:1.05}
+.legal-doc__updated{color:var(--muted);font-size:13px;margin-top:16px}
+.legal-doc h2{font-family:var(--font-display);font-weight:600;font-size:clamp(19px,2.4vw,24px);margin-top:44px;margin-bottom:14px;color:var(--ink)}
+.legal-doc p{color:var(--muted);line-height:1.75}
+.legal-doc p+p{margin-top:14px}
+.legal-doc ul{margin-top:12px;padding-left:20px;color:var(--muted);line-height:1.75}
+.legal-doc li{margin-top:6px}
+.legal-doc a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.legal-doc strong{color:var(--ink)}

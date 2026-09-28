@@ -26,6 +26,18 @@
     safeSet('promo', 'off');
   });
 
+  /* ---------- Aviso de cookies: aceptar / rechazar ---------- */
+  (function () {
+    var KEY = 'umbral-cookie-consent';
+    var banner = $('#cookieBanner');
+    if (!banner) return;
+    if (!safeGet(KEY)) banner.hidden = false;
+    var accept = $('#cookieAccept', banner), reject = $('#cookieReject', banner);
+    function close(val) { safeSet(KEY, val); banner.hidden = true; }
+    if (accept) accept.addEventListener('click', function () { close('accepted'); });
+    if (reject) reject.addEventListener('click', function () { close('rejected'); });
+  })();
+
   /* ---------- Nav: sombra + menú móvil ---------- */
   var nav = $('#nav');
   var navLinks = $('#navLinks');
